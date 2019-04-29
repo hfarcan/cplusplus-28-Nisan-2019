@@ -7,7 +7,6 @@ bool türü
 - Diğer aritmetik türler ile bool türü arasında otomatik tür dönüşümü var.
 	bool türden "true" değeri 1 değerine
 	bool türden "false" değeri 0 değerine dönüşüyor.
-
 -bool türünden pointer türlerine otomatik dönüşüm yok.
 -pointer türlerinden bool türüne otomatik tür dönüşümü var.
 ----------------------------------------------------------------------------------------------------------------------------------------C'de karakter sabitlerinin türü int'tir. C++ dilinde ise karakter sabitlerinin türü char türüdür.
@@ -34,7 +33,7 @@ enum türleri
 
 - C++'da aritmetik türlerden enum türlerine dönüşüm yok. (enum türlerinden aritmetik türlere otomatik dönüşüm C++ dilinde de var)
 
-- C++ dilinde C dilinde olmayan ve C++11 ile dile eklenen "enum class" var. 
+- C++ dilinde C dilinde olmayan ve C++11 ile dile eklenen "enum class" var. enum sınıflarının C++ diline eklenmesi ile konvensiyonel enum türlerinin kullanımı çok azaldı.
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
