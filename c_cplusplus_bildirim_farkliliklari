@@ -15,6 +15,17 @@ void func()
 	//C99'da geçersiz C++'da geçersiz
 }
 --------------------------------------------------------------------------------------------------------------------------
+Klasik C döneminden gelen ""ski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor. C++'da geçerli değil.
+
+/*    örnek kod    */
+sum(a, b, c)
+double a, b, c;
+{
+	return a + b + c;
+}
+
+Yukarıdaki fonksiyon tanımı C'de geçerli, C++'da geçersiz.
+--------------------------------------------------------------------------------------------------------------------------
 - C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
 C99 standartları ile bu durum geçersiz kılındı.
 C++'da "implicit int" geçerli değil.
