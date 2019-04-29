@@ -1,4 +1,5 @@
 Bildirimlere İlişkin Farklılıklar
+=================================
 
 - C89'da fonksiyonların "implicit" bildirimi geçerli.
 C99 standartları ile bu durum geçersiz hale getirildi.
@@ -13,18 +14,29 @@ void func()
 	//bildirimi yapılmış kabul ediliyor
 	//C99'da geçersiz C++'da geçersiz
 }
-
+--------------------------------------------------------------------------------------------------------------------------
 - C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
 C99 standartları ile bu durum geçersiz kılındı.
-C++'da "implicit int" geçerli değil
-C99/11 derleyicileri bir diagnostik vererek kodu derleyebilir. Derleyicinizin switchlerini inceleyiniz.
+C++'da "implicit int" geçerli değil.
+C99/11 derleyicileri bir diagnostik vererek kodu derleyebilir. Derleyicinizin switch'lerini inceleyiniz.
 
+/*    örnek kod    */
+foo(); //C++'da geçersiz
+
+func()  //C++'da geçersiz
+{
+	const x = 1;  //C++'da geçersiz
+	static y = 2; //C++'da geçersiz
+	///
+	return 1;
+}
+--------------------------------------------------------------------------------------------------------------------------
 C'de aşağıdaki iki bildirim arasında önemli bir fark var.
   void f1();      //f1 işlevinin parametre değişkenleri hakkında bir bilgi verilmiyor
   void f2(void);  //f2 işlevinin parametre değişkeni yok
 C'de bu iki bildirimin arasındaki farklılık geçmişe doğru uyumluluğu koruma amaçlı
 C++ dilinde bu iki bildirim eşdeğer.
-
+--------------------------------------------------------------------------------------------------------------------------
 C89'da for döngülerinin parantezi içindeki 1. kısımda bildirim yapılamıyor. C99 standartları böyle bildirimlere olanak sağlandı. 
 C++ dilinde yapılabiliyor. Ancak burada bildirilen isimlerin scope'larına ilişkin C ile C++ arasında kural farklılığı var.
 
@@ -40,3 +52,8 @@ int main()
 
 	return 0;
 }
+--------------------------------------------------------------------------------------------------------------------------
+Aşağıdaki bildirim C'de geçerli ve yazının sonunda null karakter yok.
+char str[5] = "Samet"; 
+Bu bildirim C++ dilinde geçersiz.
+--------------------------------------------------------------------------------------------------------------------------
