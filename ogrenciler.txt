@@ -1,25 +1,33 @@
-Kursa Katılan Öğrenciler
-
-İrem İkra
-Okan Ayık
-Abdullah
-Batuhan Acar
-Vecih
+Abdullah Aydın
+Alper Parker
 Alpkan Altınyar
-Behçet Çuhadar
-Yılmaz Harmancı
-Cansu Çuhadar
-Muhammed Hacıreşitoğlu
-Kadir Kaya
-Emre Öztoklu
-Emine İlaslan
-Cihan Zaim
-Mehmet Furkan Yaman
-Caner
-Candaş
-Yunus Emre
-Ersel Yurdakul
-Mahsun Bingöl
-Görkem Özuağ
+Barış Tekin
+Batuhan Acar
 Başak Avcı
-Berkhan
+Behçet Çuhadar
+Berkhan Gedik
+Candaş Sonuzun
+Caner Göksel Sonuzun
+Cansu Çuhadar
+Cihan Zaimoğlu
+Emine Koç
+Emine İlaslan
+Emre Öztoklu
+Görkem Özuağ
+Habip Furkan Arcan
+Hacı Kadir Kaya
+Hakan Özbek
+İrem İkra
+Mahsun Bingöl
+Mehmet Furkan Yaman
+Muhammed Hacıreşitoğlu
+Muharrem Ademoğlu
+Muzaffer Ersel Yurdakul
+Okan Ayık
+Ozan Sezer
+Samet Çomakçı
+Senem Yıldız
+Vecih Oğural
+Yunus Emre Keskin
+Yılmaz Harmancı
+Zeynep Uslu
