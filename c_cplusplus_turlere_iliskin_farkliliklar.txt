@@ -1,0 +1,16 @@
+--------------------------------------------------------------------------------------------------------------------------
+C'de karakter sabitlerinin türü int C++ dilinde ise karakter sabitlerinin türü char
+Aşağıdaki kodu C ve C++ derleyicilerinde ayrı ayrı derleyip çalıştırın:;
+
+/*    örnek kod */
+
+#include <stdio.h>
+
+int main()
+{
+	printf("%zu\n", sizeof('A'));
+	printf("%zu\n", sizeof('\n'));
+	printf("%zu\n", sizeof('\x41'));
+	printf("%zu\n", sizeof('\102'));
+}
+--------------------------------------------------------------------------------------------------------------------------
