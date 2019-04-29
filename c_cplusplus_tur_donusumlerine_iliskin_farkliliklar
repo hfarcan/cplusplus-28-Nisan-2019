@@ -1,0 +1,5 @@
+ Pointer'lara ilişkin Farklılıklar
+    - C'de farklı türden adresler arasında otomatik tür dönüşümü var, C++ dilinde yok.
+    - C'de adres türleri ile tamsayı /gerçek sayı türleri arasında otomatik tür dönüşümü var, C++ dilinde yok.
+    - C'de (const T *) türünden (T *) türüne otomatik tür dönüşümü var. C++ dilinde yok.
+    - C'de (void *) türünden diğer adres türlerine otomatik tür dönüşümü var. C++ dilinde yok.
