@@ -8,10 +8,10 @@ C++'da implicit işlev bildirimi geçerli değil.
 void func()
 {
     foo(); 
-	  //C89'da geçerli implicit olarak  
-	  //int foo();
-	  //bildirimi yapılmış kabul ediliyor
-	  //C99'da geçersiz C++'da geçersiz
+	//C89'da geçerli implicit olarak  
+	//int foo();
+	//bildirimi yapılmış kabul ediliyor
+	//C99'da geçersiz C++'da geçersiz
 }
 
 - C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
@@ -23,4 +23,20 @@ C'de aşağıdaki iki bildirim arasında önemli bir fark var.
   void f1();      //f1 işlevinin parametre değişkenleri hakkında bir bilgi verilmiyor
   void f2(void);  //f2 işlevinin parametre değişkeni yok
 C'de bu iki bildirimin arasındaki farklılık geçmişe doğru uyumluluğu koruma amaçlı
-C++ dilinde bu iki bildirim eşdeğer:
+C++ dilinde bu iki bildirim eşdeğer.
+
+C89'da for döngülerinin parantezi içindeki 1. kısımda bildirim yapılamıyor. C99 standartları böyle bildirimlere olanak sağlandı. 
+C++ dilinde yapılabiliyor. Ancak burada bildirilen isimlerin scope'larına ilişkin C ile C++ arasında kural farklılığı var.
+
+/*    örnek kod    */
+#include <stdio.h>
+
+int main()
+{
+	for (int i = 0; i < 10; ++i) {
+		int i = 876; //c++'da geçersiz
+		printf("%d ", i); //876
+	}
+
+	return 0;
+}
