@@ -26,3 +26,13 @@ int main()
 	printf("%zu\n", sizeof('\102'));
 }
 --------------------------------------------------------------------------------------------------------------------------
+enum türleri
+- C'de sizeof(enum T) == sizeof (int) olmak zorunda. C++'da böyle bir zorunluluk yok.
+- C++ dilinde enum türlerinde baz tür (underlying type) programcı tarafından seçilebiliyor.
+	enum Color : unsigned char {White, Black, Blue, Yellow, Red};
+- C'de enum türleri ve aritmetik türler arasında otomatik tür dönüşümü var. 
+- C++'da aritmetik türlerden enum türlerine dönüşüm yok. (enum türlerinden aritmetik türlere otomatik dönüşüm C++ dilinde de var)
+- C++ dilinde C dilinde olmayan ve C++11 ile dile eklenen "enum class" var. 
+--------------------------------------------------------------------------------------------------------------------------
+
+
