@@ -1,0 +1,26 @@
+Bildirimlere İlişkin Farklılıklar
+
+- C89'da fonksiyonların "implicit" bildirimi geçerli.
+C99 standartları ile bu durum geçersiz hale getirildi.
+C++'da implicit işlev bildirimi geçerli değil.
+
+/*    örnek kod    */
+void func()
+{
+    foo(); 
+	  //C89'da geçerli implicit olarak  
+	  //int foo();
+	  //bildirimi yapılmış kabul ediliyor
+	  //C99'da geçersiz C++'da geçersiz
+}
+
+- C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
+C99 standartları ile bu durum geçersiz kılındı.
+C++'da "implicit int" geçerli değil
+C99/11 derleyicileri bir diagnostik vererek kodu derleyebilir. Derleyicinizin switchlerini inceleyiniz.
+
+C'de aşağıdaki iki bildirim arasında önemli bir fark var.
+  void f1();      //f1 işlevinin parametre değişkenleri hakkında bir bilgi verilmiyor
+  void f2(void);  //f2 işlevinin parametre değişkeni yok
+C'de bu iki bildirimin arasındaki farklılık geçmişe doğru uyumluluğu koruma amaçlı
+C++ dilinde bu iki bildirim eşdeğer:
