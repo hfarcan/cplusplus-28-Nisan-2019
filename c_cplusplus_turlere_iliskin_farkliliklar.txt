@@ -1,3 +1,15 @@
+bool türü
+- C++'da bool bir anahtar sözcük. 
+- bool işaretsiz bir tamsayı türüdür. (unsigned integer type)
+- false ve true anahtar sözcükleri bool türden sabitler.
+- Karşılaştırma operatörleri ve lojik operatörler C'de int türden C++ dilinde ise bool türden değer üretiyorlar.
+- sizeof(bool) >= 1 olmak zorunda.
+- Diğer aritmetik türler ile bool türü arasında otomatik tür dönüşümü var.
+	bool türden "true" değeri 1 değerine
+	bool türden "false" değeri 0 değerine dönüşüyor.
+
+-bool türünden pointer türlerine otomatik dönüşüm yok.
+-pointer türlerinden bool türüne otomatik tür dönüşümü var.
 --------------------------------------------------------------------------------------------------------------------------
 C'de karakter sabitlerinin türü int C++ dilinde ise karakter sabitlerinin türü char
 Aşağıdaki kodu C ve C++ derleyicilerinde ayrı ayrı derleyip çalıştırın:;
