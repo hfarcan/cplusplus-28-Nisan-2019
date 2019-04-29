@@ -1,0 +1,12 @@
+C dilinde goto deyimi ile programın akışı bir bir değişkene ilk değer veren bildirimi atlayabilir. C++da bu durumu geçersizdir:
+Aşağıdaki kod C'de geçerli ama C++ dilinde geçersizdir:
+
+void func(void)
+{
+	goto nec;
+	int i = 0;
+nec:
+	;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
+ 
