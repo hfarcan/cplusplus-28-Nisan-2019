@@ -85,4 +85,10 @@ enum Color {Red, Blue, Black};
 Point p = {1, 3}; // C'de geçersiz C++'da geçerli
 Color c = Black; // C'de geçersiz C++'da geçerli
 Data data = {'A'}; // C'de geçersiz C++'da geçerli
+--------------------------------------------------------------------------------------------------------------------------
+Aşağıdaki bildirimler C'de geçerli C++'da geçersiz
+
+int foo(int p[const]);     // int foo(const int *p) 
+int bar(char s[static 5]); // uzunluğu en az 5 olan bir yazı adresi bekleniyor.
+--------------------------------------------------------------------------------------------------------------------------
 
