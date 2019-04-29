@@ -10,8 +10,7 @@ bool türü
 
 -bool türünden pointer türlerine otomatik dönüşüm yok.
 -pointer türlerinden bool türüne otomatik tür dönüşümü var.
---------------------------------------------------------------------------------------------------------------------------
-C'de karakter sabitlerinin türü int C++ dilinde ise karakter sabitlerinin türü char
+----------------------------------------------------------------------------------------------------------------------------------------C'de karakter sabitlerinin türü int'tir. C++ dilinde ise karakter sabitlerinin türü char türüdür.
 Aşağıdaki kodu C ve C++ derleyicilerinde ayrı ayrı derleyip çalıştırın:
 
 /*    örnek kod */
@@ -24,7 +23,7 @@ int main()
 	printf("%zu\n", sizeof('\x41'));
 	printf("%zu\n", sizeof('\102'));
 }
---------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 enum türleri
 - C'de sizeof(enum T) == sizeof (int) olmak zorunda. C++'da böyle bir zorunluluk yok.
 
@@ -36,6 +35,6 @@ enum türleri
 - C++'da aritmetik türlerden enum türlerine dönüşüm yok. (enum türlerinden aritmetik türlere otomatik dönüşüm C++ dilinde de var)
 
 - C++ dilinde C dilinde olmayan ve C++11 ile dile eklenen "enum class" var. 
---------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
