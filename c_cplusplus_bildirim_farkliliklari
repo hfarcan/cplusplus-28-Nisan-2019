@@ -15,7 +15,8 @@ void func()
 	//C99'da geçersiz C++'da geçersiz
 }
 --------------------------------------------------------------------------------------------------------------------------
-Klasik C döneminden gelen ""ski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor. C++'da geçerli değil.
+Klasik C döneminden gelen ""ski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor.
+C++'da geçerli değil.
 
 /*    örnek kod    */
 sum(a, b, c)
@@ -29,7 +30,7 @@ Yukarıdaki fonksiyon tanımı C'de geçerli, C++'da geçersiz.
 - C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
 C99 standartları ile bu durum geçersiz kılındı.
 C++'da "implicit int" geçerli değil.
-C99/11 derleyicileri bir diagnostik vererek kodu derleyebilir. Derleyicinizin switch'lerini inceleyiniz.
+C99/11 derleyicileri bir "diagnostic" (bulgu iletisi) vererek kodu derleyebilir. Derleyicinizin switch'lerini inceleyiniz.
 
 /*    örnek kod    */
 foo(); //C++'da geçersiz
@@ -43,13 +44,16 @@ func()  //C++'da geçersiz
 }
 --------------------------------------------------------------------------------------------------------------------------
 C'de aşağıdaki iki bildirim arasında önemli bir fark var.
+
   void f1();      //f1 işlevinin parametre değişkenleri hakkında bir bilgi verilmiyor
   void f2(void);  //f2 işlevinin parametre değişkeni yok
+
 C'de bu iki bildirimin arasındaki farklılık geçmişe doğru uyumluluğu koruma amaçlı
-C++ dilinde bu iki bildirim eşdeğer.
+C++ dilinde bu iki bildirim eşdeğer. (İki bildirimin arasında bir anlam farkı yok)
 --------------------------------------------------------------------------------------------------------------------------
 C89'da for döngülerinin parantezi içindeki 1. kısımda bildirim yapılamıyor. C99 standartları böyle bildirimlere olanak sağlandı. 
 C++ dilinde yapılabiliyor. Ancak burada bildirilen isimlerin scope'larına ilişkin C ile C++ arasında kural farklılığı var.
+Aşağıdaki kodu inceleyin:
 
 /*    örnek kod    */
 #include <stdio.h>
@@ -64,11 +68,13 @@ int main()
 	return 0;
 }
 --------------------------------------------------------------------------------------------------------------------------
-Aşağıdaki bildirim C'de geçerli ve yazının sonunda null karakter yok.
+Aşağıdaki bildirim C'de geçerli ve yazının sonunda null karakter yok:
+
 char str[5] = "Samet"; 
+
 Bu bildirim C++ dilinde geçersiz.
 --------------------------------------------------------------------------------------------------------------------------
-const nesne bildirimlerine ilişkin farklılıklar
+const nesne bildirimlerine ilişkin farklılıklar:
 - C'de const nesnelere ilk değer vermek zorunlu değil. C++ dilinde zorunlu.
 
 - C'de sabit ifadeleri ile ilk değerini almış const nesneler sabit ifadesi gereken yerlerde kullanılamıyorlar.
