@@ -1,5 +1,39 @@
- Pointer'lara ilişkin Farklılıklar
-    - C'de farklı türden adresler arasında otomatik tür dönüşümü var, C++ dilinde yok.
-    - C'de adres türleri ile tamsayı /gerçek sayı türleri arasında otomatik tür dönüşümü var, C++ dilinde yok.
-    - C'de (const T *) türünden (T *) türüne otomatik tür dönüşümü var. C++ dilinde yok.
-    - C'de (void *) türünden diğer adres türlerine otomatik tür dönüşümü var. C++ dilinde yok.
+C'de farklı türden adresler arasında otomatik tür dönüşümü var, C++ dilinde yok.
+C'de adres türleri ile tamsayı /gerçek sayı türleri arasında otomatik tür dönüşümü var, C++ dilinde yok.
+
+/* örnek kod  */
+void foo()
+{
+	int x = 10;
+	double dval = 1.2;
+
+	int *ptr = x; //C'de geçerli C++'da geçersiz
+	ptr = &dval;  //C'de geçerli C++'da geçersiz
+	int y = ptr;  //C'de geçerli C++'da geçersiz
+}
+--------------------------------------------------------------------------------------------------------------------------------
+C'de (const T *) türünden (T *) türüne otomatik tür dönüşümü var. C++ dilinde yok.
+
+/* örnek kod  */
+void foo()
+{
+	const int x = 10;
+	int y = 20;
+
+	int *ptr = &x; //C'de geçerli C++'da geçersiz
+	const int *p = &y;
+
+	ptr = p; //C'de geçerli C++'da geçersiz
+}
+--------------------------------------------------------------------------------------------------------------------------------
+C'de (void *) türünden diğer adres türlerine otomatik tür dönüşümü var. C++ dilinde yok.
+
+/* örnek kod  */
+#include <stdlib.h>
+
+void foo(size_t n)
+{
+	int *p = malloc(n * sizeof(int)); //C'de geçerli C++'da geçersiz
+	//...
+}
+--------------------------------------------------------------------------------------------------------------------------------
