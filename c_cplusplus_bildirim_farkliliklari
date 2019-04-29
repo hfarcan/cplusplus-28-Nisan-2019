@@ -57,3 +57,9 @@ Aşağıdaki bildirim C'de geçerli ve yazının sonunda null karakter yok.
 char str[5] = "Samet"; 
 Bu bildirim C++ dilinde geçersiz.
 --------------------------------------------------------------------------------------------------------------------------
+const nesne bildirimlerine ilişkin farklılıklar
+	- C'de const nesnelere ilk değer vermek zorunlu değil. C++ dilinde zorunlu.
+    - C'de sabit ifadeleri ile ilk değerini almış const nesneler sabit ifadesi gereken yerlerde kullanılamıyorlar. C++'da kullanılabiliyorlar.
+    - C'de global const nesneler varsayılan biçimde dış bağlantıya (external linkage) aitler. C++'da iç bağlantıya (internal linkage) aitler.
+	--------------------------------------------------------------------------------------------------------------------------
+
