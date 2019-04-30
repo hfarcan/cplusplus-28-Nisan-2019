@@ -44,8 +44,7 @@ int main()
 	char str[3] = "ali";
 	enum Color color = Red;
 	++color;
-	
-  Fruit f = Mango;
+	Fruit f = Mango;
 	const int cx = 10;
 	int ival = 56;
 	func(ival);
