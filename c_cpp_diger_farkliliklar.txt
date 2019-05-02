@@ -1,4 +1,4 @@
-C dilinde goto deyimi ile programın akışı bir bir değişkene ilk değer veren bildirimi atlayabilir. C++da bu durumu geçersizdir:
+C dilinde goto deyimi ile programın akışı bir bir değişkene ilk değer veren bildirimi atlayabilir. C++ dilinde bu durumu geçersizdir:
 Aşağıdaki kod C'de geçerli ama C++ dilinde geçersizdir:
 
 void func(void)
