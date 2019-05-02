@@ -8,14 +8,13 @@ C++'da implicit işlev bildirimi geçerli değil.
 /*    örnek kod    */
 void func()
 {
-    foo(); 
+    	foo(); 
 	//C89'da geçerli implicit olarak  
 	//int foo();
 	//bildirimi yapılmış kabul ediliyor
 	//C99'da geçersiz C++'da geçersiz
 }
------------------------------------------------------------------------------------------------------------------------------------------
-Klasik C döneminden gelen ""ski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor.
+----------------------------------------------------------------------------------------------------------------------------------------Klasik C döneminden gelen "eski stil fonksiyon tanımlamaları" (old style function definitions) C'de geçerliliğini koruyor.
 C++'da geçerli değil.
 
 /*    örnek kod    */
@@ -26,8 +25,7 @@ double a, b, c;
 }
 
 Yukarıdaki fonksiyon tanımı C'de geçerli, C++'da geçersiz.
------------------------------------------------------------------------------------------------------------------------------------------
-- C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
+----------------------------------------------------------------------------------------------------------------------------------------C89'da implicit int (gizli int - örtülü int - kapalı int) kuralı geçerli.
 C99 standartları ile bu durum geçersiz kılındı.
 C++'da "implicit int" geçerli değil.
 C99/11 derleyicileri bir "diagnostic" (bulgu iletisi) vererek kodu derleyebilir. Derleyicinizin switch'lerini inceleyiniz.
@@ -42,7 +40,12 @@ func()  //C++'da geçersiz
 	///
 	return 1;
 }
------------------------------------------------------------------------------------------------------------------------------------------
+
+C89 standartlarına göre yukarıdaki kodda 
+-bildirilen foo işlevinin gerei dönüş değeri türü int
+-tanımlanan func işlevinin geri dönüş değeri türü int
+func işlevi içinde tanımlanan x ve y değişkenlerinin türü int
+----------------------------------------------------------------------------------------------------------------------------------------
 C'de aşağıdaki iki bildirim arasında önemli bir fark var.
 
   void f1();      //f1 işlevinin parametre değişkenleri hakkında bir bilgi verilmiyor
@@ -50,7 +53,7 @@ C'de aşağıdaki iki bildirim arasında önemli bir fark var.
 
 C'de bu iki bildirimin arasındaki farklılık geçmişe doğru uyumluluğu korumayı amaçlıyor.
 C++ dilinde bu iki bildirim eşdeğer. (İki bildirimin arasında bir anlam farkı yok)
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 C89'da for döngülerinin parantezi içindeki 1. kısımda bildirim yapılamıyor. C99 standartları böyle bildirimlere olanak sağlandı. 
 C++ dilinde yapılabiliyor. Ancak burada bildirilen isimlerin scope'larına ilişkin C ile C++ arasında kural farklılığı var.
 Aşağıdaki kodu inceleyin:
@@ -67,13 +70,13 @@ int main()
 
 	return 0;
 }
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 Aşağıdaki bildirim C'de geçerli ve yazının sonunda null karakter yok:
 
 char str[5] = "Samet"; 
 
 Bu bildirim C++ dilinde geçersiz.
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 const nesne bildirimlerine ilişkin farklılıklar:
 - C'de const nesnelere ilk değer vermek zorunlu değil. C++ dilinde zorunlu.
 
@@ -82,7 +85,7 @@ C++'da kullanılabiliyorlar.
 
 - C'de global const nesneler varsayılan biçimde dış bağlantıya (external linkage) aitler. 
 C++'da iç bağlantıya (internal linkage) aitler.
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 C'de bir enum, union ve struct anahtar sözcükleri ile oluşturulan türler söz konusu olduğunda bildirimde kullanılan "tag" (etiket), 
 değişken bildirimlerinde doğrudan kullanılamıyor:
 
@@ -102,10 +105,22 @@ enum Color {Red, Blue, Black};
 Point p = {1, 3}; // C'de geçersiz C++'da geçerli
 Color c = Black; // C'de geçersiz C++'da geçerli
 Data data = {'A'}; // C'de geçersiz C++'da geçerli
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 Aşağıdaki bildirimler C'de geçerli C++'da geçersiz
 
 int foo(int p[const]);     // int foo(const int *p) 
 int bar(char s[static 5]); // uzunluğu en az 5 olan bir yazı adresi bekleniyor.
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+C'de kullanımdan düşmüş olan auto anahtar sözcüğünün C++ dilindeki anlamı farklı.
+Aşağıdaki kod C'de geçerli ancak C++'da geçersiz:
 
+/* örnek kod */
+void func()
+{
+	auto int x; //C'de geçerli C++'da geçersiz
+	auto int y = 10;  //C'de geçerli C++'da geçersiz
+	//...
+}
+
+auto C++ dilinin en sık kullanılan anahtar sözcüklerinden bir.auto anahtar sözcüğü "Tür çıkarımı" (type deduction) denilen araç seti ile ilgili.
+----------------------------------------------------------------------------------------------------------------------------------------
