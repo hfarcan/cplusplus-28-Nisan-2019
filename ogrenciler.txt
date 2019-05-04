@@ -14,7 +14,7 @@ Emine Koç
 Emine İlaslan
 Emre Öztoklu
 Görkem Özuağ
-Habip Furkan Arcan
+Habib Furkan Arcan
 Hacı Kadir Kaya
 Hakan Özbek
 İrem İkra
@@ -31,3 +31,5 @@ Vecih Oğural
 Yunus Emre Keskin
 Yılmaz Harmancı
 Zeynep Uslu
+Samet Akçalar
+Tevfik Uluocak
